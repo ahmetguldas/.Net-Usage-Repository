@@ -1,7 +1,13 @@
+using CORE_Usage_Repository.Models.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//AddTransient = Her servis isteðinde yeni bir instance oluþturulur. Transient servisinden üretilir.
+//Herhangi bir yerden IProductRepository cagrildigindan ProductRepository den bir ornek gonder.
+builder.Services.AddTransient<IProductRepository, ProductRepository>();
 
 var app = builder.Build();
 
