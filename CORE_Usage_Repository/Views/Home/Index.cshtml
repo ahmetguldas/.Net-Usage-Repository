@@ -7,6 +7,9 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+<div class="row">
+    <a class="btn btn-success" asp-action="Insert" asp-controller="Home">Urun Ekle</a>
+</div>
 <div class="row" style="margin-top:50px;">
     <table class="table table-bordered table-hover">
         <thead>
@@ -16,6 +19,7 @@
                 <th>Description</th>
                 <th>Category</th>
                 <th>Price</th>
+                <th>Islemler</th>
             </tr>
         </thead>
         <tbody>
@@ -27,6 +31,10 @@
                     <td>@item.Description</td>
                     <td>@item.Category</td>
                     <td>@item.Price</td>
+                    <td>
+                        <a class="btn btn-sm btn-warning" asp-controller="Home" asp-action="Update" asp-route-id="@item.ID">Guncelle</a>
+                        <a class="btn btn-sm btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@item.ID">Sil</a>
+                    </td>
                 </tr>
             }
         </tbody>

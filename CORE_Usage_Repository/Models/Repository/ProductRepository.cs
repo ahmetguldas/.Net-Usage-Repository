@@ -10,6 +10,26 @@
             new Product (){ID=4, ProductName="Domates",Description="Diyarbakir",Category="Sebzeler", Price=18.99M},
         }.AsQueryable();//Soldaki IQueryable Sagdaki List oldugundan casting islemi ile hatayi cozuyoruz.
 
+        public bool DeleteProduct(int id)
+        {
+            throw new NotImplementedException();
+        }
 
+        public Product GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        //hata vermesini engellemek icin implementasyonu gerceklestirdik
+        public bool InsertProduct(Product product)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool UpdateProduct(Product product)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
