@@ -39,6 +39,8 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+SeedData.Seed(app); //
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
