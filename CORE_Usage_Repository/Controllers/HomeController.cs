@@ -18,7 +18,8 @@ namespace CORE_Usage_Repository.Controllers
 
         public IActionResult Index()
         {
-            return View(_repository.Products);
+            //return View(_repository.Products);
+            return View (_repository.Products.Where(x=>x.Price < 15).ToList());//IQueryable ifade ile beraber where filtresi ile flitrelemis oldugumuz verileri getir diyoruz.yani aslinda filtrelerimi bu sorgumun icerisine eklemis oluyoruz ve son IQueryable olusturulana kadarda bu isleme devam ediyoruz.
         }
 
         public IActionResult Privacy()
